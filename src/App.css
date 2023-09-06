@@ -1,38 +1,135 @@
+/* Styling for the entire app */
 .App {
+  font-family: Arial, sans-serif;
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Styling for the Navbar */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-list {
+  list-style: none;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-item {
+  margin: 0 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-item a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav-item a:hover {
+  text-decoration: underline;
+}
+
+
+/* Styling for my name */
+.App h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Styling for the "About Me" section */
+.AboutMe {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.AboutMe h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.AboutMe p {
+  font-size: 1rem;
+}
+
+/* Styling for my project */
+.Project {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.Project p {
+  font-size: 1rem;
+}
+
+.Project a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.Project a:hover {
+  text-decoration: underline;
+}
+
+.WorkExperience {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.WorkExperience h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.positions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.position {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.position h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.position p {
+  font-size: 1rem;
+}
+
+/* Styling for the Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
 }

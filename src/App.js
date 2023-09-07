@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import AboutMe from './components/AboutMe';
 import Project from './components/Project';
 import WorkExperience from './components/WorkExperience';
-import Navbar from './components/Navbar'; // Import Navbar component
-import Footer from './components/Footer'; // Import Footer component
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import projectsData from './data/projects';
+import Artwork from './components/Artwork';
+
 
 function App() {
   const [showAllProjects, setShowAllProjects] = useState(false);
@@ -38,6 +40,11 @@ function App() {
         className="button"
         onClick={() => setShowAllProjects(true)}>View All Projects</button>
       )}
+           <div className="artwork-container"
+           id="artwork-section">
+        <Artwork />
+        
+      </div>
       <Footer />
     </div>
   );

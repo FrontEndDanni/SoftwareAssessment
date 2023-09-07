@@ -1,3 +1,4 @@
+
 /* Styling for the entire app */
 .App {
   font-family: Arial, sans-serif;
@@ -5,11 +6,22 @@
 
 }
 
+body, p, a, span, div, /* Add other selectors as needed */
+input, textarea, button {
+  font-family: 'Work Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 /* Add other title selectors as needed */ {
+  font-family: 'Playfair Display', serif;
+}
 /* Styling for the Navbar */
 .navbar {
-  background-color: #333;
-  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color:white;
+  color: black;
   padding: 10px 0;
+  box-shadow: 0px 10px 8px rgba(52, 52, 52, 0.1);
 }
 
 .nav-list {
@@ -25,7 +37,7 @@
 
 .nav-item a {
   text-decoration: none;
-  color: #fff;
+  color: black;
   font-weight: bold;
 }
 
@@ -43,19 +55,19 @@
 
 /* Styling for the "About Me" section */
 .AboutMe {
-  background-color: #f0f0f0;
+  background-color: #e4f2ff;
   padding: 20px;
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
+  max-width: 600px;
+  text-align: center;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
 }
 
 .AboutMe h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-}
-
-.AboutMe p {
-  font-size: 1rem;
 }
 
 /* Styling for my project */
@@ -64,7 +76,11 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  margin-bottom: 20px;
+  border-radius: 8px;
+  margin: 0 auto 20px;
+  max-width: 600px;
+  text-align: center;
+  overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -90,7 +106,7 @@
 }
 
 .WorkExperience {
-  background-color: #f0f0f0;
+  background-color: #fbffe4;
   padding: 20px;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -135,11 +151,10 @@
 }
 
 .button {
-  background-color: #007bff; 
+  background-color: black; 
   color: #fff; 
   padding: 10px 20px; 
   border: none; 
-  border-radius: 5px; 
   cursor: pointer; 
   font-size: 1rem; 
   margin-top: 10px;
@@ -148,6 +163,72 @@
   margin-bottom:20px;
 
   &:hover {
-    background-color: #0056b3; /* Darker background color on hover */
+    background-color: rgb(89, 89, 89); /* Lighter background color on hover */
+  }
+}
+
+/* Styling for the button */
+.ResumeDownloadButton {
+  background-color: black; 
+  color: #fff; 
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer; 
+  font-size: 1rem; 
+  margin-top: 10px; 
+  transition: background-color 0.3s ease; 
+
+  /* Hover state */
+  &:hover {
+    background-color: rgb(89, 89, 89);
+  }
+}
+
+
+/* Styling for the artwork container */
+.artwork-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Styling for the art display box */
+.artwork-card {
+  flex: 1;
+  margin-right: 10px;
+}
+
+/* Styling for the description box */
+.description-box {
+  flex: 1;
+  background-color: #e4f2ff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the 'Why I Included This API' heading */
+.description-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Styling for the paragraph in the description box */
+.description-box p {
+  font-size: 1rem;
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  /* Stack components vertically */
+  .artwork-container {
+    flex-direction: column;
+  }
+  .artwork-card,
+  .description-box {
+    flex: auto;
+    margin-right: 0;
   }
 }

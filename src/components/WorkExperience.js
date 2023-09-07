@@ -1,6 +1,8 @@
 import React from 'react';
 import '../App.css';
 import workExperienceData from '../data/workExperience';
+import ResumeDownloadButton from './ResumeDownloadButton'; 
+
 
 const WorkExperience = () => {
     return (
@@ -12,11 +14,13 @@ const WorkExperience = () => {
               <h3>{position.title}</h3>
               <p>{position.company}</p>
               <p>{position.date}</p>
-              <p>{position.description}</p>
             </div>
           ))}
         </div>
-        {/* Add the download resume button here */}
+        <ResumeDownloadButton
+        pdfUrl="/path-to-your-resume.pdf" // Provide the URL to your resume PDF
+        fileName="Dannika_Dull_Resume.pdf" // Specify the desired file name
+      />
       </div>
     );
   };
